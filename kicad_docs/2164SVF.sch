@@ -1,0 +1,331 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 4
+Title "SSM2164 state variable filter"
+Date "2020-07-29"
+Rev "0"
+Comp ""
+Comment1 "creativecommons.org/licenses/by/4.0/"
+Comment2 "License: CC by 4.0"
+Comment3 "Author: Jordan Aceto"
+Comment4 ""
+$EndDescr
+$Sheet
+S 4500 1450 1500 1500
+U 5F6F4121
+F0 "audio_path" 50
+F1 "audio_path.sch" 50
+F2 "high_pass_out" O R 6000 1600 59 
+F3 "band_pass_out" O R 6000 1700 59 
+F4 "low_pass_out" O R 6000 1800 59 
+F5 "Vfc_in" I R 6000 2650 59 
+F6 "Vrez_in" I R 6000 2800 59 
+F7 "filter_input" I L 4500 1600 59 
+$EndSheet
+$Sheet
+S 4500 3450 1500 1500
+U 5F74FEFA
+F0 "CV_path" 50
+F1 "CV_path.sch" 50
+F2 "Vfc_out" O R 6000 3600 59 
+F3 "resonance_CV_in" I L 4500 3800 59 
+F4 "1v_per_oct_in" I L 4500 3600 59 
+F5 "FM_in" I L 4500 3700 59 
+F6 "Vrez_out" O R 6000 3750 59 
+$EndSheet
+$Sheet
+S 4500 5450 1500 1500
+U 5F79F1EC
+F0 "power_supply" 50
+F1 "power_supply.sch" 50
+$EndSheet
+Wire Wire Line
+	6000 3600 6100 3600
+Wire Wire Line
+	6100 3600 6100 2650
+Wire Wire Line
+	6100 2650 6000 2650
+Wire Wire Line
+	6000 2800 6200 2800
+Wire Wire Line
+	6200 2800 6200 3750
+Wire Wire Line
+	6200 3750 6000 3750
+$Comp
+L power:GND #PWR0101
+U 1 1 5FB5CD2C
+P 3250 1950
+F 0 "#PWR0101" H 3250 1700 50  0001 C CNN
+F 1 "GND" H 3255 1777 50  0000 C CNN
+F 2 "" H 3250 1950 50  0001 C CNN
+F 3 "" H 3250 1950 50  0001 C CNN
+	1    3250 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1950 3250 1850
+Wire Wire Line
+	3250 1850 3150 1850
+$Comp
+L Device:R R1
+U 1 1 5FB5EA55
+P 7650 1600
+F 0 "R1" V 7550 1600 50  0000 C CNN
+F 1 "1k" V 7650 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7580 1600 50  0001 C CNN
+F 3 "~" H 7650 1600 50  0001 C CNN
+	1    7650 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FB5EFEC
+P 7700 2450
+F 0 "R2" V 7600 2450 50  0000 C CNN
+F 1 "1k" V 7700 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7630 2450 50  0001 C CNN
+F 3 "~" H 7700 2450 50  0001 C CNN
+	1    7700 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5FB5F125
+P 7750 3350
+F 0 "R3" V 7650 3350 50  0000 C CNN
+F 1 "1k" V 7750 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7680 3350 50  0001 C CNN
+F 3 "~" H 7750 3350 50  0001 C CNN
+	1    7750 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7500 1600 6000 1600
+$Comp
+L svf_parts:PJ301M-12 J1
+U 1 1 5F3778C7
+P 2700 1750
+F 0 "J1" H 2708 2125 50  0000 C CNN
+F 1 "PJ301M-12" H 2708 2034 50  0000 C CNN
+F 2 "svf_footprints:PJ301M-12" H 2700 1750 50  0001 C CNN
+F 3 "" H 2700 1750 50  0000 C CNN
+	1    2700 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1750 3250 1750
+Wire Wire Line
+	3250 1750 3250 1850
+Connection ~ 3250 1850
+Wire Wire Line
+	3150 1600 4500 1600
+$Comp
+L power:GND #PWR012
+U 1 1 5F379A9C
+P 3250 3950
+F 0 "#PWR012" H 3250 3700 50  0001 C CNN
+F 1 "GND" H 3255 3777 50  0000 C CNN
+F 2 "" H 3250 3950 50  0001 C CNN
+F 3 "" H 3250 3950 50  0001 C CNN
+	1    3250 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3950 3250 3850
+Wire Wire Line
+	3250 3850 3150 3850
+$Comp
+L svf_parts:PJ301M-12 J2
+U 1 1 5F379AA4
+P 2700 3750
+F 0 "J2" H 2708 4125 50  0000 C CNN
+F 1 "PJ301M-12" H 2708 4034 50  0000 C CNN
+F 2 "svf_footprints:PJ301M-12" H 2700 3750 50  0001 C CNN
+F 3 "" H 2700 3750 50  0000 C CNN
+	1    2700 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 3750 3250 3750
+Wire Wire Line
+	3250 3750 3250 3850
+Connection ~ 3250 3850
+Wire Wire Line
+	3150 3600 4500 3600
+$Comp
+L power:GND #PWR013
+U 1 1 5F37A2EB
+P 3250 4750
+F 0 "#PWR013" H 3250 4500 50  0001 C CNN
+F 1 "GND" H 3255 4577 50  0000 C CNN
+F 2 "" H 3250 4750 50  0001 C CNN
+F 3 "" H 3250 4750 50  0001 C CNN
+	1    3250 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4750 3250 4650
+Wire Wire Line
+	3250 4650 3150 4650
+$Comp
+L svf_parts:PJ301M-12 J3
+U 1 1 5F37A2F3
+P 2700 4550
+F 0 "J3" H 2708 4925 50  0000 C CNN
+F 1 "PJ301M-12" H 2708 4834 50  0000 C CNN
+F 2 "svf_footprints:PJ301M-12" H 2700 4550 50  0001 C CNN
+F 3 "" H 2700 4550 50  0000 C CNN
+	1    2700 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4550 3250 4550
+Wire Wire Line
+	3250 4550 3250 4650
+Connection ~ 3250 4650
+$Comp
+L power:GND #PWR014
+U 1 1 5F37AD30
+P 3300 5600
+F 0 "#PWR014" H 3300 5350 50  0001 C CNN
+F 1 "GND" H 3305 5427 50  0000 C CNN
+F 2 "" H 3300 5600 50  0001 C CNN
+F 3 "" H 3300 5600 50  0001 C CNN
+	1    3300 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 5600 3300 5500
+Wire Wire Line
+	3300 5500 3200 5500
+$Comp
+L svf_parts:PJ301M-12 J5
+U 1 1 5F37AD38
+P 2750 5400
+F 0 "J5" H 2758 5775 50  0000 C CNN
+F 1 "PJ301M-12" H 2758 5684 50  0000 C CNN
+F 2 "svf_footprints:PJ301M-12" H 2750 5400 50  0001 C CNN
+F 3 "" H 2750 5400 50  0000 C CNN
+	1    2750 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 5400 3300 5400
+Wire Wire Line
+	3300 5400 3300 5500
+Connection ~ 3300 5500
+$Comp
+L power:GND #PWR015
+U 1 1 5F37BFF2
+P 7800 1950
+F 0 "#PWR015" H 7800 1700 50  0001 C CNN
+F 1 "GND" H 7805 1777 50  0000 C CNN
+F 2 "" H 7800 1950 50  0001 C CNN
+F 3 "" H 7800 1950 50  0001 C CNN
+	1    7800 1950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1950 7800 1850
+Wire Wire Line
+	7800 1850 7900 1850
+$Comp
+L svf_parts:PJ301M-12 J6
+U 1 1 5F37BFFA
+P 8350 1750
+F 0 "J6" H 8358 2125 50  0000 C CNN
+F 1 "PJ301M-12" H 8358 2034 50  0000 C CNN
+F 2 "svf_footprints:PJ301M-12" H 8350 1750 50  0001 C CNN
+F 3 "" H 8350 1750 50  0000 C CNN
+	1    8350 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5F37F2EE
+P 7850 2800
+F 0 "#PWR016" H 7850 2550 50  0001 C CNN
+F 1 "GND" H 7855 2627 50  0000 C CNN
+F 2 "" H 7850 2800 50  0001 C CNN
+F 3 "" H 7850 2800 50  0001 C CNN
+	1    7850 2800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2800 7850 2700
+Wire Wire Line
+	7850 2700 7950 2700
+$Comp
+L svf_parts:PJ301M-12 J7
+U 1 1 5F37F2F6
+P 8400 2600
+F 0 "J7" H 8408 2975 50  0000 C CNN
+F 1 "PJ301M-12" H 8408 2884 50  0000 C CNN
+F 2 "svf_footprints:PJ301M-12" H 8400 2600 50  0001 C CNN
+F 3 "" H 8400 2600 50  0000 C CNN
+	1    8400 2600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5F3803DF
+P 7900 3700
+F 0 "#PWR017" H 7900 3450 50  0001 C CNN
+F 1 "GND" H 7905 3527 50  0000 C CNN
+F 2 "" H 7900 3700 50  0001 C CNN
+F 3 "" H 7900 3700 50  0001 C CNN
+	1    7900 3700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3700 7900 3600
+Wire Wire Line
+	7900 3600 8000 3600
+$Comp
+L svf_parts:PJ301M-12 J8
+U 1 1 5F3803E7
+P 8450 3500
+F 0 "J8" H 8458 3875 50  0000 C CNN
+F 1 "PJ301M-12" H 8458 3784 50  0000 C CNN
+F 2 "svf_footprints:PJ301M-12" H 8450 3500 50  0001 C CNN
+F 3 "" H 8450 3500 50  0000 C CNN
+	1    8450 3500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3700 3800 3700
+Wire Wire Line
+	3800 3700 3800 4400
+Wire Wire Line
+	3800 4400 3150 4400
+Wire Wire Line
+	4500 3800 4100 3800
+Wire Wire Line
+	4100 3800 4100 5250
+Wire Wire Line
+	4100 5250 3200 5250
+Wire Wire Line
+	7800 1600 7900 1600
+Wire Wire Line
+	7900 3350 8000 3350
+Wire Wire Line
+	7850 2450 7950 2450
+Wire Wire Line
+	6000 1700 7150 1700
+Wire Wire Line
+	7150 1700 7150 2450
+Wire Wire Line
+	7150 2450 7550 2450
+Wire Wire Line
+	6000 1800 6900 1800
+Wire Wire Line
+	6900 1800 6900 3350
+Wire Wire Line
+	6900 3350 7600 3350
+NoConn ~ 7900 1750
+NoConn ~ 7950 2600
+NoConn ~ 8000 3500
+$EndSCHEMATC
