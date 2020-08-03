@@ -543,8 +543,8 @@ F 3 "~" H 3300 3900 50  0001 C CNN
 	1    3300 3900
 	0    1    1    0   
 $EndComp
-Text Notes 9800 3800 0    50   ~ 0
-0 volts to +1 volts
-Text Notes 4200 4900 0    50   ~ 0
-+2 volts to 0 volts
+Text Notes 9800 3850 0    50   ~ 0
+approximately\n0 volts to +1 volts
+Text Notes 4150 4950 0    50   ~ 0
+approximately\n+2 volts to 0 volts
 $EndSCHEMATC

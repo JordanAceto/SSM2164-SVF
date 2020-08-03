@@ -328,4 +328,50 @@ Wire Wire Line
 NoConn ~ 7900 1700
 NoConn ~ 7950 2550
 NoConn ~ 8000 3450
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5F294ABE
+P 9500 5550
+F 0 "H1" H 9600 5599 50  0000 L CNN
+F 1 "MountingHole_Pad" H 9600 5508 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9500 5550 50  0001 C CNN
+F 3 "~" H 9500 5550 50  0001 C CNN
+	1    9500 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5F2950C3
+P 9500 5650
+F 0 "#PWR02" H 9500 5400 50  0001 C CNN
+F 1 "GND" H 9505 5477 50  0000 C CNN
+F 2 "" H 9500 5650 50  0001 C CNN
+F 3 "" H 9500 5650 50  0001 C CNN
+	1    9500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5F296001
+P 9500 6050
+F 0 "H2" H 9600 6099 50  0000 L CNN
+F 1 "MountingHole_Pad" H 9600 6008 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9500 6050 50  0001 C CNN
+F 3 "~" H 9500 6050 50  0001 C CNN
+	1    9500 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5F296007
+P 9500 6150
+F 0 "#PWR018" H 9500 5900 50  0001 C CNN
+F 1 "GND" H 9505 5977 50  0000 C CNN
+F 2 "" H 9500 6150 50  0001 C CNN
+F 3 "" H 9500 6150 50  0001 C CNN
+	1    9500 6150
+	1    0    0    -1  
+$EndComp
+Text Notes 9300 5300 0    50   ~ 0
+optional mounting holes\nif wiring jacks and pots\nwith flying wires
 $EndSCHEMATC

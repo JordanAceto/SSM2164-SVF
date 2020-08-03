@@ -85,19 +85,6 @@ Wire Wire Line
 	1450 3450 1900 3450
 Connection ~ 2000 3450
 $Comp
-L Device:R R?
-U 1 1 5F726DEF
-P 3800 3700
-AR Path="/5F726DEF" Ref="R?"  Part="1" 
-AR Path="/5F6F4121/5F726DEF" Ref="R11"  Part="1" 
-F 0 "R11" H 3700 3700 50  0000 C CNN
-F 1 "510" V 3800 3700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3730 3700 50  0001 C CNN
-F 3 "~" H 3800 3700 50  0001 C CNN
-	1    3800 3700
-	-1   0    0    1   
-$EndComp
-$Comp
 L SSM2164_SVF_parts:SSM2164 U?
 U 1 1 5F726DF5
 P 4200 3450
@@ -182,7 +169,7 @@ AR Path="/5F726E1A" Ref="C?"  Part="1"
 AR Path="/5F6F4121/5F726E1A" Ref="C6"  Part="1" 
 F 0 "C6" V 5498 3150 50  0000 C CNN
 F 1 "220pF" V 5589 3150 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm" H 5788 3000 50  0001 C CNN
+F 2 "svf_footprints:timing_cap_dual_fp" H 5788 3000 50  0001 C CNN
 F 3 "~" H 5750 3150 50  0001 C CNN
 	1    5750 3150
 	0    1    1    0   
@@ -260,7 +247,7 @@ AR Path="/5F726E42" Ref="C?"  Part="1"
 AR Path="/5F6F4121/5F726E42" Ref="C5"  Part="1" 
 F 0 "C5" V 5498 2350 50  0000 C CNN
 F 1 "22nF" V 5589 2350 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm" H 5788 2200 50  0001 C CNN
+F 2 "svf_footprints:timing_cap_dual_fp" H 5788 2200 50  0001 C CNN
 F 3 "~" H 5750 2350 50  0001 C CNN
 	1    5750 2350
 	0    1    1    0   
@@ -274,7 +261,7 @@ U 1 1 5F726E4B
 P 7300 3700
 AR Path="/5F726E4B" Ref="R?"  Part="1" 
 AR Path="/5F6F4121/5F726E4B" Ref="R15"  Part="1" 
-F 0 "R15" H 7200 3700 50  0000 C CNN
+F 0 "R15" H 7150 3700 50  0000 C CNN
 F 1 "510" V 7300 3700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7230 3700 50  0001 C CNN
 F 3 "~" H 7300 3700 50  0001 C CNN
@@ -350,15 +337,15 @@ Wire Wire Line
 $Comp
 L Amplifier_Operational:TL072 U?
 U 1 1 5F726E72
-P 9300 3550
+P 3000 6000
 AR Path="/5F726E72" Ref="U?"  Part="1" 
 AR Path="/5F6F4121/5F726E72" Ref="U3"  Part="1" 
-F 0 "U3" H 9400 3750 50  0000 C CNN
-F 1 "TL072" H 9450 3850 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9300 3550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9300 3550 50  0001 C CNN
-	1    9300 3550
-	1    0    0    1   
+F 0 "U3" H 3100 6200 50  0000 C CNN
+F 1 "TL072" H 3150 6300 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3000 6000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3000 6000 50  0001 C CNN
+	1    3000 6000
+	-1   0    0    1   
 $EndComp
 $Comp
 L 2164SVF-rescue:GND #PWR?
@@ -387,7 +374,7 @@ AR Path="/5F726E81" Ref="C?"  Part="1"
 AR Path="/5F6F4121/5F726E81" Ref="C9"  Part="1" 
 F 0 "C9" V 9050 3150 50  0000 C CNN
 F 1 "220pF" V 9150 3150 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm" H 9338 3000 50  0001 C CNN
+F 2 "svf_footprints:timing_cap_dual_fp" H 9338 3000 50  0001 C CNN
 F 3 "~" H 9300 3150 50  0001 C CNN
 	1    9300 3150
 	0    1    1    0   
@@ -417,7 +404,7 @@ AR Path="/5F726E92" Ref="C?"  Part="1"
 AR Path="/5F6F4121/5F726E92" Ref="C8"  Part="1" 
 F 0 "C8" V 9050 2350 50  0000 C CNN
 F 1 "22nF" V 9150 2350 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm" H 9338 2200 50  0001 C CNN
+F 2 "svf_footprints:timing_cap_dual_fp" H 9338 2200 50  0001 C CNN
 F 3 "~" H 9300 2350 50  0001 C CNN
 	1    9300 2350
 	0    1    1    0   
@@ -494,15 +481,15 @@ Connection ~ 6150 3550
 $Comp
 L Amplifier_Operational:TL072 U?
 U 2 1 5F726EC1
-P 3000 6000
+P 9300 3550
 AR Path="/5F726EC1" Ref="U?"  Part="2" 
 AR Path="/5F6F4121/5F726EC1" Ref="U3"  Part="2" 
-F 0 "U3" H 3150 6150 50  0000 C CNN
-F 1 "TL072" H 3100 6250 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3000 6000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3000 6000 50  0001 C CNN
-	2    3000 6000
-	-1   0    0    1   
+F 0 "U3" H 9450 3700 50  0000 C CNN
+F 1 "TL072" H 9400 3800 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9300 3550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9300 3550 50  0001 C CNN
+	2    9300 3550
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R?
@@ -552,15 +539,15 @@ Wire Wire Line
 $Comp
 L SSM2164_SVF_parts:SSM2164 U?
 U 3 1 5F726EDD
-P 4700 5900
+P 10100 5850
 AR Path="/5F726EDD" Ref="U?"  Part="3" 
 AR Path="/5F6F4121/5F726EDD" Ref="U2"  Part="3" 
-F 0 "U2" H 4800 6265 50  0000 C CNN
-F 1 "SSM2164" H 4800 6174 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4800 6100 50  0001 C CNN
-F 3 "" H 4800 6100 50  0001 C CNN
-	3    4700 5900
-	-1   0    0    -1  
+F 0 "U2" H 10200 6215 50  0000 C CNN
+F 1 "SSM2164" H 10200 6124 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10200 6050 50  0001 C CNN
+F 3 "" H 10200 6050 50  0001 C CNN
+	3    10100 5850
+	1    0    0    -1  
 $EndComp
 Connection ~ 3400 5900
 $Comp
@@ -628,19 +615,19 @@ Connection ~ 6150 4600
 Wire Wire Line
 	4700 6400 4700 6200
 Text Notes 8850 1900 0    50   ~ 0
-optional DPDT range switch\nadds 22nF in parallel with the\n220pF integrator caps which puts\nthe filter in very low frequency \nmode. When the switch is closed \nand the resonance is cranked\nup to the point of self-oscillation\nthe filter can be used as a sine \nwave LFO.
+optional DPDT range switch\nadds 22nF in parallel with the\n220pF integrator caps which puts\nthe filter in very low frequency \nmode. When the switch is closed \nand the resonance is cranked\nup to the point of self-oscillation\nthe filter can be used as a sine \nwave LFO.\n\nIf this feature is not desired then\njust do not install C5, C8, and SW1.
 $Comp
 L SSM2164_SVF_parts:SSM2164 U?
 U 4 1 5F726F16
-P 10100 5850
+P 4700 5900
 AR Path="/5F726F16" Ref="U?"  Part="4" 
 AR Path="/5F6F4121/5F726F16" Ref="U2"  Part="4" 
-F 0 "U2" H 10100 6200 50  0000 C CNN
-F 1 "SSM2164" H 10100 6100 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10200 6050 50  0001 C CNN
-F 3 "" H 10200 6050 50  0001 C CNN
-	4    10100 5850
-	1    0    0    -1  
+F 0 "U2" H 4700 6250 50  0000 C CNN
+F 1 "SSM2164" H 4700 6150 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4800 6100 50  0001 C CNN
+F 3 "" H 4800 6100 50  0001 C CNN
+	4    4700 5900
+	-1   0    0    -1  
 $EndComp
 Text HLabel 2800 3100 2    50   Output ~ 0
 high_pass_out
@@ -774,4 +761,21 @@ Text Notes 10450 5700 0    50   ~ 0
 unused
 NoConn ~ 10100 6150
 NoConn ~ 10600 5850
+Text Notes 6550 2650 0    50   ~ 0
+Integrator caps C5, C6, C8 and C9\nhave a dual footprint which can \naccept either through-hole or SMD\npackages. Fit only one or the other.
+Text Notes 5200 1900 0    50   ~ 0
+Zeners D1 and D2 limit the\namplitude of the self oscillation.\n\nYou can experiment with different\nzeners or other clipping networks to\nachieve the desired  sine wave amplitude\nwhen the filter is self oscillating.\n\nNote that these zeners also have some \ncapacitance which is in parallel with the\nintegrator cap(s). This may have some effect\non the filter. Experimentation is suggested.
+$Comp
+L Device:R R?
+U 1 1 5F726DEF
+P 3800 3700
+AR Path="/5F726DEF" Ref="R?"  Part="1" 
+AR Path="/5F6F4121/5F726DEF" Ref="R11"  Part="1" 
+F 0 "R11" H 3650 3700 50  0000 C CNN
+F 1 "510" V 3800 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3730 3700 50  0001 C CNN
+F 3 "~" H 3800 3700 50  0001 C CNN
+	1    3800 3700
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
