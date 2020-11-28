@@ -1,4 +1,4 @@
-update=Mon 03 Aug 2020 08:45:22 AM EDT
+update=Sat 28 Nov 2020 01:08:43 PM EST
 last_client=kicad
 [eeschema]
 version=1
